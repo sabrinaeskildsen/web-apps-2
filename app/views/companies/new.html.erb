@@ -1,3 +1,26 @@
+<h1>Hi Eduardo</h1>
+<h2>I know what you're thinking. Yes, this is better than Salesforce. :-) </h2>
+
+<%= form_with :model => @company do |form| %>
+  <p>
+    <%= form.label "name", "Company Name" %>
+    <%= form.text_field "name" %>
+  </p>
+  <p>
+    <%= form.label "city" %>
+    <%= form.text_field "city" %>
+    <%= form.label "state" %>
+    <%= form.text_field "state" %>
+  </p>
+  <%= form.submit %>
+<% end %>
+
+<p>
+    <a href="/companies">Back to main page
+    </a>
+</p>
+
+<!--
 <form action="/companies" method="post">
   <p>
     <label for="name">Name</label>
@@ -11,3 +34,4 @@
   </p>
   <button>Submit</button>
 </form>
+-->
