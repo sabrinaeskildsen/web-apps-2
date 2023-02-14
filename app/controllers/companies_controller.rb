@@ -1,4 +1,3 @@
-class CompaniesController < ApplicationController
 
   # TODO:
   def index
@@ -6,7 +5,8 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @company = Company.find_by({ "id" => params["id"] })
+    @contact = Contact.find_by({"id" => params["id"] })
+    @company = Company.find_by({"id" => @contact["company_id"] })
   end
 
   def new
@@ -22,6 +22,3 @@ class CompaniesController < ApplicationController
     redirect_to"/companies"
   end
 
-
-
-end
